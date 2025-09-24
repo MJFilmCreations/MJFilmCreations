@@ -3,12 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="MJ Creations - Video Production & Creative Services" />
+  <meta name="description" content="MJ Creations - Professional Video Production & Creative Services" />
   <meta name="author" content="MJ Creations" />
   <title>MJ Creations</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Open Graph for SEO -->
+  <meta property="og:title" content="MJ Creations - Video Production & Creative Services" />
+  <meta property="og:description" content="From ads to event highlights, MJ Creations brings your story to life with creativity and impact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mjcreations.github.io/" />
+  <meta property="og:image" content="assets/img/no-bg.png" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
   <style>
     h1, h2, h3, h4, h5, h6, .nav-link, p, a, span, label {
       text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
@@ -22,25 +33,18 @@
       overflow: hidden;
       animation: typing 2.5s steps(30, end), blink 0.7s step-end infinite;
     }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-    /* 竖线淡出 */
-    .typing.done {
-      border-right: none;
-      transition: border-color 0.5s ease, opacity 1s ease;
-      opacity: 1;
-    }
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blink { 50% { border-color: transparent } }
+    .typing.done { border-right: none; }
 
     /* 当前导航高亮 */
     .active-link {
-      color: #2563eb !important; /* Tailwind Blue-600 */
+      color: #2563eb !important;
       font-weight: bold;
     }
+
+    /* 平滑滚动 */
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
@@ -65,7 +69,7 @@
 
   <!-- Hero Section -->
   <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 via-white to-blue-50 text-center px-6">
-    <div class="bg-gradient-to-r from-white/90 to-blue-200/80 text-gray-800 px-12 py-16 rounded-3xl shadow-xl backdrop-blur-md border border-white/40" 
+    <div class="bg-gradient-to-r from-white/90 to-blue-200/80 text-gray-800 px-12 py-16 rounded-3xl shadow-xl backdrop-blur-md border border-white/40"
          data-aos="fade-up" data-aos-duration="1000">
       <h1 class="text-5xl md:text-6xl font-extrabold mb-6 typing" id="typingText" data-aos="zoom-in" data-aos-delay="300">
         Creative Video Production
@@ -85,8 +89,8 @@
     <div class="max-w-6xl mx-auto px-6 text-center" data-aos="fade-up">
       <h2 class="text-4xl font-bold mb-10">About Us</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-        At MJ Creations, we specialize in crafting visually compelling stories.  
-        With experience across commercials, corporate videos, and event highlights,  
+        At MJ Creations, we specialize in crafting visually compelling stories.<br>
+        With experience across commercials, corporate videos, and event highlights,<br>
         our team ensures your brand stands out with creativity and impact.
       </p>
     </div>
@@ -117,22 +121,19 @@
   <section id="showcase" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Showcase</h2>
-      
       <div class="grid md:grid-cols-3 gap-6 mb-12">
-        <img src="assets/img/portfolio/1.jpg" alt="Showcase 1" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/img/portfolio/2.jpg" alt="Showcase 2" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
-        <img src="assets/img/portfolio/3.jpg" alt="Showcase 3" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="600">
+        <img src="assets/img/portfolio/1.jpg" alt="Showcase Project 1" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/portfolio/2.jpg" alt="Showcase Project 2" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/portfolio/3.jpg" alt="Showcase Project 3" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="600">
       </div>
-
       <div class="grid md:grid-cols-2 gap-6 mb-10">
-        <video controls class="w-full rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="300">
+        <video controls preload="metadata" class="w-full rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="300">
           <source src="assets/img/portfolio/showcase1.mp4" type="video/mp4">
         </video>
-        <video controls class="w-full rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="500">
+        <video controls preload="metadata" class="w-full rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="500">
           <source src="assets/img/portfolio/showcase2.mp4" type="video/mp4">
         </video>
       </div>
-
       <div class="text-center" data-aos="fade-up">
         <a href="portfolio.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
           View Full Portfolio
@@ -142,24 +143,21 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-12 mt-12 bg-gray-50">
-    <div class="max-w-md mx-auto px-4" data-aos="fade-up">
-      <div class="bg-white shadow-lg rounded-2xl p-6 border border-gray-100">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-3 text-center">Contact Us</h2>
-        <p class="text-gray-600 mb-4 text-center text-sm">
-          Have a project in mind? Let’s bring your vision to life.
-        </p>
-        <form id="contactForm" class="space-y-3">
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="max-w-lg mx-auto px-6" data-aos="fade-up">
+      <div class="bg-white shadow-lg rounded-2xl p-8 border border-gray-100">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Contact Us</h2>
+        <form id="contactForm" class="space-y-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700">Name</label>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
             <input type="text" id="name" class="w-full px-3 py-2 mt-1 border rounded-lg shadow-sm text-sm focus:ring focus:ring-blue-200" required />
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700">Company Name</label>
+            <label for="company" class="block text-sm font-medium text-gray-700">Company Name</label>
             <input type="text" id="company" class="w-full px-3 py-2 mt-1 border rounded-lg shadow-sm text-sm focus:ring focus:ring-blue-200" />
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700">Select Service</label>
+            <label for="service" class="block text-sm font-medium text-gray-700">Select Service</label>
             <select id="service" class="w-full px-3 py-2 mt-1 border rounded-lg shadow-sm text-sm focus:ring focus:ring-blue-200" required>
               <option value="">-- Please choose --</option>
               <option value="Short Reels / TikTok Video">Short Reels / TikTok Video</option>
@@ -168,46 +166,49 @@
             </select>
           </div>
           <div class="text-center">
-            <button type="submit" class="inline-flex items-center gap-2 px-5 py-2 bg-green-600 text-white text-sm font-medium rounded-lg shadow-sm hover:bg-green-700 transition">
+            <button type="submit" class="px-5 py-2 bg-green-600 text-white text-sm font-medium rounded-lg shadow-sm hover:bg-green-700 transition">
               Send Message
             </button>
           </div>
         </form>
-        <div class="mt-4 text-center text-gray-600 text-xs">
-          <p>Email: <a href="mailto:mjcreationswork@gmail.com" class="text-blue-600">mjcreationswork@gmail.com</a></p>
-          <p>Phone: +60 11-6179 8068</p>
+        <!-- 联系信息 -->
+        <div class="mt-6 space-y-2 text-center text-base text-gray-700">
+          <p><strong>Email:</strong> <a href="mailto:mjcreationswork@gmail.com" class="text-blue-600 hover:text-blue-800">mjcreationswork@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="https://api.whatsapp.com/send?phone=601161798068" target="_blank" class="text-blue-600 hover:text-blue-800">+60 11-6179 8068</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/mjcreations0309/" target="_blank" class="text-blue-600 hover:text-blue-800">mjcreations0309</a></p>
+          <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61555458350481" target="_blank" class="text-blue-600 hover:text-blue-800">MJ Creations</a></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white border-t py-6">
+  <footer class="bg-white border-t py-6 relative">
     <div class="max-w-6xl mx-auto px-6 text-center text-gray-600 text-sm" data-aos="fade-up">
-      © 2025 MJ Creations. All rights reserved.
+      © 2025 MJ Creations. All rights reserved.<br />
+      <a href="https://www.instagram.com/mjcreations0309/" target="_blank" class="text-blue-600 hover:text-blue-800">Instagram</a> | 
+      <a href="https://www.facebook.com/profile.php?id=61555458350481" target="_blank" class="text-blue-600 hover:text-blue-800">Facebook</a>
     </div>
+    <!-- Back to top -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="absolute right-6 bottom-6 bg-blue-600 text-white p-2 rounded-full shadow-md hover:bg-blue-700 transition" aria-label="Back to Top">
+      ↑
+    </button>
   </footer>
 
   <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+    AOS.init({ duration: 800, once: true });
 
     // 打字效果竖线淡出
     const typingEl = document.getElementById("typingText");
     typingEl.addEventListener("animationend", () => {
-      setTimeout(() => {
-        typingEl.classList.add("done");
-      }, 500);
+      setTimeout(() => typingEl.classList.add("done"), 500);
     });
 
     // 滚动导航高亮
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("nav a");
-
     window.addEventListener("scroll", () => {
       let current = "";
       sections.forEach(section => {
@@ -217,7 +218,6 @@
           current = section.getAttribute("id");
         }
       });
-
       navLinks.forEach(link => {
         link.classList.remove("active-link");
         if (link.getAttribute("href") === `#${current}`) {
@@ -237,6 +237,5 @@
       window.open(url, "_blank");
     });
   </script>
-
 </body>
 </html>
