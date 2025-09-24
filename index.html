@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="MJ Creations - Video Production & Creative Services" />
+  <meta name="author" content="MJ Creations" />
+  <title>MJ Creations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    h1, h2, h3, h4, h5, h6, .nav-link, p, a, span, label {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+    }
+
+    /* 打字机效果 */
+    .typing {
+      display: inline-block;
+      border-right: 2px solid #000;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2.5s steps(30, end), blink 0.7s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    /* 竖线淡出 */
+    .typing.done {
+      border-right: none;
+      transition: border-color 0.5s ease, opacity 1s ease;
+      opacity: 1;
+    }
+
+    /* 当前导航高亮 */
+    .active-link {
+      color: #2563eb !important; /* Tailwind Blue-600 */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50" data-aos="fade-down" data-aos-duration="800">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div class="flex items-center space-x-3">
+        <a href="index.html">
+          <img src="assets/img/no-bg.png" alt="MJ Creations Logo" class="h-12 w-auto" data-aos="zoom-in" data-aos-delay="300"/>
+        </a>
+        <a href="index.html" class="font-bold text-lg tracking-wide hover:text-blue-600 transition">MJ Creations</a>
+      </div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
+        <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+        <a href="#showcase" class="text-gray-700 hover:text-blue-600 transition">Showcase</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 via-white to-blue-50 text-center px-6">
+    <div class="bg-gradient-to-r from-white/90 to-blue-200/80 text-gray-800 px-12 py-16 rounded-3xl shadow-xl backdrop-blur-md border border-white/40" 
+         data-aos="fade-up" data-aos-duration="1000">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 typing" id="typingText" data-aos="zoom-in" data-aos-delay="300">
+        Creative Video Production
+      </h1>
+      <p class="text-lg max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="600">
+        From ads to event highlights, MJ Creations brings your story to life with professional video production.
+      </p>
+      <a href="#contact" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
+         data-aos="flip-up" data-aos-delay="800">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-10">About Us</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        At MJ Creations, we specialize in crafting visually compelling stories.  
+        With experience across commercials, corporate videos, and event highlights,  
+        our team ensures your brand stands out with creativity and impact.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-xl font-semibold mb-4">📢 Ads Commercial Video</h3>
+          <p class="text-gray-600">High-quality commercials tailored to capture attention and elevate your brand presence.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="400">
+          <h3 class="text-xl font-semibold mb-4">🎬 Event Highlight Video</h3>
+          <p class="text-gray-600">Engaging event highlight videos that preserve your most memorable moments with cinematic storytelling.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="600">
+          <h3 class="text-xl font-semibold mb-4">📱 Short Reels / TikTok Video</h3>
+          <p class="text-gray-600">Creative short-form videos designed to boost engagement on TikTok, Instagram Reels, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section id="showcase" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Showcase</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <img src="assets/img/portfolio/1.jpg" alt="Showcase 1" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/portfolio/2.jpg" alt="Showcase 2" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/portfolio/3.jpg" alt="Showcase 3" class="rounded-xl shadow-md hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="600">
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <video controls class="w-full rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="300">
+          <source src="assets/img/portfolio/showcase1.mp4" type="video/mp4">
+        </video>
+        <video controls class="w-full rounded-xl shadow-md" data-aos="zoom-in" data-aos-delay="500">
+          <source src="assets/img/portfolio/showcase2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="text-center" data-aos="fade-up">
+        <a href="portfolio.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+          View Full Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 mt-12 bg-gray-50">
+    <div class="max-w-md mx-auto px-4" data-aos="fade-up">
+      <div class="bg-white shadow-lg rounded-2xl p-6 border border-gray-100">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-3 text-center">Contact Us</h2>
+        <p class="text-gray-600 mb-4 text-center text-sm">
+          Have a project in mind? Let’s bring your vision to life.
+        </p>
+        <form id="contactForm" class="space-y-3">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" id="name" class="w-full px-3 py-2 mt-1 border rounded-lg shadow-sm text-sm focus:ring focus:ring-blue-200" required />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Company Name</label>
+            <input type="text" id="company" class="w-full px-3 py-2 mt-1 border rounded-lg shadow-sm text-sm focus:ring focus:ring-blue-200" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Select Service</label>
+            <select id="service" class="w-full px-3 py-2 mt-1 border rounded-lg shadow-sm text-sm focus:ring focus:ring-blue-200" required>
+              <option value="">-- Please choose --</option>
+              <option value="Short Reels / TikTok Video">Short Reels / TikTok Video</option>
+              <option value="Event Highlight Video / Photo">Event Highlight Video / Photo</option>
+              <option value="Ads Commercial Video">Ads Commercial Video</option>
+            </select>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="inline-flex items-center gap-2 px-5 py-2 bg-green-600 text-white text-sm font-medium rounded-lg shadow-sm hover:bg-green-700 transition">
+              Send Message
+            </button>
+          </div>
+        </form>
+        <div class="mt-4 text-center text-gray-600 text-xs">
+          <p>Email: <a href="mailto:mjcreationswork@gmail.com" class="text-blue-600">mjcreationswork@gmail.com</a></p>
+          <p>Phone: +60 11-6179 8068</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-6">
+    <div class="max-w-6xl mx-auto px-6 text-center text-gray-600 text-sm" data-aos="fade-up">
+      © 2025 MJ Creations. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    // 打字效果竖线淡出
+    const typingEl = document.getElementById("typingText");
+    typingEl.addEventListener("animationend", () => {
+      setTimeout(() => {
+        typingEl.classList.add("done");
+      }, 500);
+    });
+
+    // 滚动导航高亮
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active-link");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active-link");
+        }
+      });
+    });
+
+    // WhatsApp 联系表单
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let name = document.getElementById("name").value.trim();
+      let company = document.getElementById("company").value.trim();
+      let service = document.getElementById("service").value;
+      let message = `Hello, my name is *${name}*.\nCompany: *${company}*.\nI am interested in: *${service}*.`; 
+      let url = `https://api.whatsapp.com/send?phone=601161798068&text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+</html>
