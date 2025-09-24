@@ -14,7 +14,6 @@
     h1, h2, h3, h4, h5, h6, .nav-link, p, a, span, label {
       text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
     }
-
     /* 当前导航高亮 */
     .active-link {
       color: #2563eb !important; /* Tailwind Blue-600 */
@@ -39,34 +38,45 @@
         <a href="portfolio.html" class="text-gray-700 hover:text-blue-600 transition font-semibold active-link">Showcase</a>
         <a href="index.html#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
       </nav>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menuBtn" class="p-2 rounded-md bg-gray-100 hover:bg-gray-200">☰</button>
+      </div>
     </div>
+    <!-- Mobile nav -->
+    <nav id="mobileNav" class="hidden flex-col space-y-2 mt-2 px-6 md:hidden bg-white shadow-lg">
+      <a href="index.html#about" class="block text-gray-700 hover:text-blue-600 py-2">About Us</a>
+      <a href="index.html#services" class="block text-gray-700 hover:text-blue-600 py-2">Services</a>
+      <a href="portfolio.html" class="block text-gray-700 hover:text-blue-600 py-2 font-semibold active-link">Showcase</a>
+      <a href="index.html#contact" class="block text-gray-700 hover:text-blue-600 py-2">Contact</a>
+    </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 via-white to-blue-50 text-center px-6" data-aos="fade-up">
-    <div class="bg-gradient-to-r from-white/90 to-blue-200/80 text-gray-800 px-12 py-16 rounded-3xl shadow-xl backdrop-blur-md border border-white/40">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6" data-aos="zoom-in" data-aos-delay="300">Portfolio Showcase</h1>
-      <p class="text-lg max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="500">
+  <section class="min-h-[80vh] flex items-center justify-center bg-gradient-to-r from-blue-50 via-white to-blue-50 text-center px-6 sm:px-12" data-aos="fade-up">
+    <div class="bg-gradient-to-r from-white/90 to-blue-200/80 text-gray-800 px-6 sm:px-12 py-12 sm:py-16 rounded-3xl shadow-xl backdrop-blur-md border border-white/40">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6" data-aos="zoom-in" data-aos-delay="300">Portfolio Showcase</h1>
+      <p class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="500">
         Explore our video and photo projects that bring stories to life with creativity and impact.
       </p>
-      <a href="#portfolio-section" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition" data-aos="flip-up" data-aos-delay="700">
+      <a href="#portfolio-section" class="px-6 sm:px-8 py-2 sm:py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition" data-aos="flip-up" data-aos-delay="700">
         View Works
       </a>
     </div>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio-section" class="py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
+  <section id="portfolio-section" class="py-16 sm:py-20 bg-gradient-to-br from-blue-50 via-white to-gray-50">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-12" data-aos="fade-up">
-        <h2 class="text-4xl font-bold">Our Portfolio</h2>
-        <h3 class="text-lg text-gray-600">Video and Photo Projects</h3>
+        <h2 class="text-3xl sm:text-4xl font-bold">Our Portfolio</h2>
+        <h3 class="text-base sm:text-lg text-gray-600 mt-2">Video and Photo Projects</h3>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Video Projects -->
         <div data-aos="fade-up" data-aos-delay="200">
-          <h4 class="text-2xl font-semibold mb-4 text-gray-800">Video</h4>
+          <h4 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">Video</h4>
           <div class="space-y-6">
             <img class="w-full rounded-xl shadow-md hover:shadow-xl transition" src="./assets/img/portfolio/1.jpg" alt="Video 1" data-aos="zoom-in" data-aos-delay="300">
             <img class="w-full rounded-xl shadow-md hover:shadow-xl transition" src="./assets/img/portfolio/2.jpg" alt="Video 2" data-aos="zoom-in" data-aos-delay="400">
@@ -74,7 +84,7 @@
         </div>
         <!-- Photo Projects -->
         <div data-aos="fade-up" data-aos-delay="300">
-          <h4 class="text-2xl font-semibold mb-4 text-gray-800">Photo</h4>
+          <h4 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">Photo</h4>
           <div class="space-y-6">
             <img class="w-full rounded-xl shadow-md hover:shadow-xl transition" src="./assets/img/portfolio/3.jpg" alt="Photo 1" data-aos="zoom-in" data-aos-delay="500">
             <img class="w-full rounded-xl shadow-md hover:shadow-xl transition" src="./assets/img/portfolio/4.jpg" alt="Photo 2" data-aos="zoom-in" data-aos-delay="600">
@@ -84,7 +94,7 @@
 
       <!-- Back to Home Button -->
       <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="700">
-        <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+        <a href="index.html" class="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
           Back to Home
         </a>
       </div>
@@ -93,7 +103,7 @@
 
   <!-- Footer -->
   <footer class="bg-white border-t py-6 mt-12" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-6 text-center text-gray-600 text-sm">
+    <div class="max-w-6xl mx-auto px-6 text-center text-gray-600 text-sm sm:text-base">
       © 2025 MJ Creations. All rights reserved.
     </div>
   </footer>
@@ -101,11 +111,14 @@
   <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
+    AOS.init({ duration: 800, once: true });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.toggle("hidden");
     });
   </script>
-
 </body>
 </html>
